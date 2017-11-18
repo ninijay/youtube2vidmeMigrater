@@ -1,5 +1,6 @@
 var auth;
-
+var vids = [];
+var videoLink = "https://www.youtube.com/watch?v=";
 function getAuth(){
     $.ajaxSetup({beforeSend: function(xhr){
         if (xhr.overrideMimeType)
@@ -16,16 +17,28 @@ function getAuth(){
     });
 }
 
-function fetchVideos(creator){
-    var vids = [];
-    // fetchvideos from creator
-    return vids;
-}
-
 $(document).ready(function (){
     getAuth();
 });
 
+function getChannelForUser(user){
+    var user = [];
+    gapi.client.setApiKey(auth.key);
+    gapi.client.load('youtube', 'v3', function(){
+        var request = gapi.client.youtube.channels.list({
+            forUsername : user,
+            part : id,
+            maxResults: 1
+        });
+        request.execute(function(response){
+            var channel = respone.results.items;
+            $.each(channel, function(index, item){
+                user.push(item.id);
+            })
+        })
+    });
+    return user[0];
+}
 
 function keyWordsearch(){
     gapi.client.setApiKey(auth.key);
@@ -39,15 +52,17 @@ function keyWordsearch(){
     var request = gapi.client.youtube.search.list({
             q: q,
             part: 'snippet', 
-            maxResults: 10
+            maxResults: 100
     });
     request.execute(function(response)  {                                                                                    
             $('#results').empty()
             var srchItems = response.result.items;                      
             $.each(srchItems, function(index, item) {
-            vidTitle = item.snippet.title;  
-
-            $('#results').append('<pre>' + vidTitle + '</pre>');                      
+            vidId = item.id.videoId;  
+            if(typeof vidId != 'undefined'){
+                vids.push(videoLink + vidId );
+            }
+            console.log(videoLink + vidId);                      
     })  
 })  
 }
