@@ -2,24 +2,12 @@ var auth;
 var vids = [];
 var videoLink = "https://www.youtube.com/watch?v=";
 
-function getAuth() {
-    $.ajaxSetup({
-        beforeSend: function (xhr) {
-            if (xhr.overrideMimeType) {
-                xhr.overrideMimeType("application/json");
-            }
-        }
-    });
-    $.ajaxSetup({ "async": false });
-    $.getJSON("youtube/auth.json", function (data) {
-        auth = data;
-    }).fail(function (d, textStatus, error) {
-        console.error("getJSON failed, status: " + textStatus + ", error: " + error)
-    });
-}
-
 $(document).ready(function () {
-    getAuth();
+    $.getScript("functions/connectivity.js",function()
+    {
+        getAuth("youtube");
+    });
+    
 });
 
 function getChannelForUser(user) {
