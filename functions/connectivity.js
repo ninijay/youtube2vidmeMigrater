@@ -1,3 +1,5 @@
+var auth;
+
 function getAuth(service) {
     $.ajaxSetup({
         beforeSend: function (xhr) {
@@ -8,8 +10,10 @@ function getAuth(service) {
     });
     $.ajaxSetup({ "async": false });
     return $.getJSON(service + "/auth.json", function (data) {
-        return data;
+        auth = data;
     }).fail(function (d, textStatus, error) {
         console.error("getJSON failed, status: " + textStatus + ", error: " + error)
     });
+
+    return auth;
 }

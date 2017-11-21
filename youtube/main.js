@@ -5,7 +5,9 @@ var videoLink = "https://www.youtube.com/watch?v=";
 $(document).ready(function () {
     $.getScript("functions/connectivity.js",function()
     {
-        getAuth("youtube");
+       auth =  getAuth("youtube");
+       auth = auth.responseJSON;
+       console.log(auth.key);
     });
     
 });
@@ -20,7 +22,7 @@ function getChannelForUser(user) {
             maxResults: 1
         });
         request.execute(function (response) {
-            var channel = respone.results.items;
+            var channel = response.results.items;
             $.each(channel, function (index, item) {
                 user.push(item.id);
             })
@@ -41,11 +43,11 @@ function makeRequest() {
     var request = gapi.client.youtube.search.list({
         q: q,
         part: 'snippet',
-        maxResults: 100
+        maxResults: 50
     });
     request.execute(function (response) {
         $('#results').empty()
-        var srchItems = response.result.items;
+        var srchItems = response.results.items;
         $.each(srchItems, function (index, item) {
             vidId = item.id.videoId;
             if (typeof vidId != 'undefined') {
