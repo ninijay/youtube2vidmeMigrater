@@ -47,13 +47,14 @@ function makeRequest() {
     });
     request.execute(function (response) {
         $('#results').empty()
-        var srchItems = response.results.items;
+        var srchItems = response.items;
         $.each(srchItems, function (index, item) {
             vidId = item.id.videoId;
             if (typeof vidId != 'undefined') {
                 vids.push(videoLink + vidId);
+                console.log(videoLink + vidId);
             }
-            console.log(videoLink + vidId);
+            
         })
     })
 }
