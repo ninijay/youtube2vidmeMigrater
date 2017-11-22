@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <title>YouTube 2 VidMe</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
     <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,10 +15,15 @@
     <script src="youtube/main.js"></script>
     <script src="vidme/main.js"></script>
     <link rel="stylesheet" href="css/style.css" />
+    
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
 </head>
 
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -74,7 +81,7 @@
     <div class="container-fluid" id="jimminy">
         <div id="about" class="row">
             <div class="text-center container">
-                <h1>About</h1>
+                <h1 class="text-primary"><i class="fa fa-info-circle" aria-hidden="true"></i> About</h1>
                 <p>Don't act so surprised, Your Highness. You weren't on any mercy mission this time. Several transmissions
                     were beamed to this ship by Rebel spies. I want to know what happened to the plans they sent you. Don't
                     underestimate the Force.</p>
@@ -89,7 +96,7 @@
         </div>
         <div id="howtouse" class="row">
             <div class="text-center container">
-                <h1>How To Use</h1>
+                <h1><i class="fa fa-compass" aria-hidden="true"></i> How To Use</h1>
                 <p>Don't act so surprised, Your Highness. You weren't on any mercy mission this time. Several transmissions
                     were beamed to this ship by Rebel spies. I want to know what happened to the plans they sent you. Don't
                     underestimate the Force.</p>
@@ -104,11 +111,11 @@
         </div>
         <div class="text-center row" id="use">
             <div class="container">
-                <h1 class="text-primary">Let's do this!</h1>
+                <h1 class="text-primary"><i class="fa fa-check" aria-hidden="true"></i> Let's do this!</h1>
                 <div id="buttons">
                     <label>
                         <input id="query" type="text" />
-                        <button id="search-button" class="btn-primary" onclick="keyWordsearch()">Search</button>
+                        <button id="search-button" class="btn-geckoboard" onclick="keyWordsearch()">Search</button>
                     </label>
                     <div id="container">
                         <h1>Search Results</h1>
@@ -118,7 +125,15 @@
             </div>
         </div>
     </div>
-
+    <footer>
+        <div class="container text-center">
+            <p>
+                &copy; Mattia Ninivaggi | 2017
+            </p>
+            <p><a href="https://github.com/ninijay"><i class="fa fa-github" aria-hidden="true"></i> Github</a> | <a href="https://tech-brew.net/"><i class="fa fa-pencil" aria-hidden="true"></i>
+                 Blog</a></p>
+        </div>
+    </footer>
 </body>
 
 </html>

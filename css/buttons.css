@@ -1,0 +1,17 @@
+.btn-geckoboard {
+	background: rgb(41,153,153);
+	background-image: none;
+	border:none;
+	color: #fff;
+	letter-spacing: 1px;
+	font-weight: 600;
+	text-decoration: none ! important;
+	text-shadow: none;
+	text-transform: uppercase;
+	transition: all 0.3s ease-in-out 0s;		
+	-webkit-transition: all 0.3s ease-in-out 0s;		
+}
+.btn-geckoboard:hover {
+	background: #333;
+	color: #fff;
+}
