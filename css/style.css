@@ -1,0 +1,71 @@
+body,html {
+    height: 100%;
+  }
+  
+  body {
+    padding-top: 50px;
+  }
+  
+  .wide {
+    width:100%;
+    height:100%;
+    height:calc(100% - 1px);
+    background-image: url('https://images.unsplash.com/photo-1486693128850-a77436e7ba3c?dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+     /*url('https://c.stocksy.com/a/RcN300/z0/805779.jpg');*/
+    background-size:cover;
+  }
+  
+  .wide img {
+    width:100%;
+  }
+  
+  .logo {
+    color:#fff;
+    font-weight:800;
+    font-size:14pt;
+    padding:25px;
+    text-align:center;
+  }
+  
+  .line {
+    padding-top:20px;
+    white-space:no-wrap;
+    overflow:hidden;
+    text-align:center;
+  }
+
+  .text-white {
+    color:white;
+  }
+
+  #intro {
+    padding: 10em;
+    background: rgba(255, 255, 255, 0.1)
+  }
+
+#intro em {
+  color:#f44;
+}
+
+#howtouse {
+  background-color:rgb(255, 68, 68);
+}
+
+#howtouse h1, #howtouse p {
+  color: white;
+  
+}
+
+#use{
+  background-color:rgb(41,153,153);
+}
+
+
+#jimminy > div {
+  padding: 7em;
+  padding-top: 4em;
+}
+
+#jimminy > div {
+  font-size: 1.5em;
+}
