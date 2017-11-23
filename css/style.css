@@ -111,3 +111,7 @@ footer a {
 footer a:hover {
   color:white;
 }
+
+#use {
+  display: none;
+}

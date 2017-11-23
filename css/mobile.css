@@ -1,0 +1,13 @@
+@media (max-width: 740px) {
+    #jimminy > div {
+        padding: 3em;
+        padding-top: 2em;
+        padding-bottom: 1em;
+      }
+    
+      #intro {
+        padding: 5em;
+      }
+}
+
+  
