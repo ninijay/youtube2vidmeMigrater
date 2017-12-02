@@ -1,7 +1,7 @@
 # youtube2vidmeMigrater
 A tool to migrate all videos from youtube to vidme. It's not very secure atm, but it's not meant for production or web plattforms.
 
-This project will be discontinued because vidme is shutting down.
+*This project will be discontinued because vidme is shutting down.*
 
 After I manage to implement the rest- calls, I'll try to make them as secure as possible.
 
