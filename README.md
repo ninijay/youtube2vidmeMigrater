@@ -1,6 +1,8 @@
 # youtube2vidmeMigrater
 A tool to migrate all videos from youtube to vidme. It's not very secure atm, but it's not meant for production or web plattforms.
 
+This project will be discontinued because vidme is shutting down.
+
 After I manage to implement the rest- calls, I'll try to make them as secure as possible.
 
 Just enter your YouTube Channel Name in the textbox and it will look for the first 50 videos of your channel [and list them in the console].
